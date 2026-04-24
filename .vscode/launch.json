@@ -1,0 +1,24 @@
+{
+    // launch.json 的格式版本，固定写法，与 extension 的版本号无关。
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // 这个配置在 Run and Debug 面板顶部下拉列表里显示的名字。
+            "name": "Launch Extension",
+            // 告诉 VSCode 这是一个 extension 调试配置。
+            // VSCode 看到 extensionHost，知道要启动一个新的 Extension Development Host 窗口。
+            "type": "extensionHost",
+            // 调试模式是"启动新进程"，而不是"附加到已有进程"。
+            "request": "launch",
+            // 传给新 VSCode 窗口的命令行参数。
+            "args": [
+                // 告诉新 VSCode 窗口：从当前项目目录加载 extension。
+                // ${workspaceFolder} 是 VSCode 内置变量，指向当前打开的项目根目录，
+                // 也就是 squiggle-muter 目录。
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                // 告诉Extension Host窗口打开下面这个目录作为工作区。
+                "D:\\vscode-extensions\\test-projects"
+            ]
+        }
+    ]
+}

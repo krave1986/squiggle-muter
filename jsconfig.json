@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        // 对于不使用打包工具 webpack 或 vite 的项目，
+        // node.js 在导入时，需要指定文件的扩展名
+        // "module": "nodenext" 就是用来指定这一行为，同时兼容 ESM 和 CJS 的模块解析。
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        // 开启 JS 文件的类型检查，提供 IntelliSense 和未使用变量提示。
+        // 与 tsconfig.json 不同，jsconfig.json 的 checkJs 默认就是 true，这里显式声明。
+        // 虽然部分功能与 ESLint 重叠，但是我们会通过配置和自己的插件进行过滤。
+        "checkJs": true,
+        // 关掉隐式 any 的报错。
+        // 纯 JS 项目没有类型注释是正常的，不应该因此报错。
+        "noImplicitAny": false,
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
