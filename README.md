@@ -8,17 +8,17 @@ provided by the TypeScript language service.
 ## Usage
 
 **Step 1** — Hover over a squiggle and note the code in the tooltip.
-It looks like this: `ts(7044)`. The number is what you need.
+It looks like this: `ts(7006)`. The number is what you need.
 
 ![alt text](images/find_error_code.png)
 
 **Step 2** — Add the code to your user settings:
 
 ```json
-"squiggleMuter.suppressedCodes": [7044]
+"squiggleMuter.suppressedCodes": [7006]
 ```
 
-_(screenshot placeholder)_
+![alt text](images/add_error_code.png)
 
 The setting is global — it applies to all projects automatically.
 No per-project configuration needed.
@@ -59,7 +59,7 @@ ESLint, Prettier, or any other linter are not affected.
 ## Finding a diagnostic code
 
 Hover over any squiggle in the editor. The code appears at the end of the
-tooltip in parentheses, for example `ts(7044)`.
+tooltip in parentheses, for example `ts(7006)`.
 
 ## Common codes
 
