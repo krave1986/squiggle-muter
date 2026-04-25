@@ -6,6 +6,10 @@
     "type": "module",
     "publisher": "krave",
     "license": "MIT",
+    "scripts": {
+        "generate:vsix": "vsce package",
+        "publish:marketplace": "vsce publish"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/krave1986/squiggle-muter.git"
@@ -50,6 +54,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
+        "@vscode/vsce": "^3.9.1",
         "eslint": "^10.2.0",
         "eslint-config-prettier": "^10.1.8",
         "globals": "^17.5.0",

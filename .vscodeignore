@@ -4,3 +4,5 @@ eslint.config.*
 .prettierrc*
 node_modules/
 plugin/package.json
+.gitignore
+jsconfig.json
