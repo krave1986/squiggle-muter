@@ -5,3 +5,4 @@ eslint.config.*
 plugin/
 .gitignore
 jsconfig.json
+**/.originals/

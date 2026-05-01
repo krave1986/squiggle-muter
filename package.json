@@ -2,7 +2,7 @@
     "name": "squiggle-muter",
     "displayName": "Squiggle Muter",
     "description": "Hide annoying squiggles in JavaScript or TypeScript files",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "type": "module",
     "publisher": "krave",
     "license": "MIT",
