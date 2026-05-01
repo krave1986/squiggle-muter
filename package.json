@@ -7,8 +7,9 @@
     "publisher": "krave",
     "license": "MIT",
     "scripts": {
-        "generate:vsix": "vsce package",
-        "publish:marketplace": "vsce publish"
+        "generate:vsix": "vsce package --follow-symlinks",
+        "publish:marketplace": "vsce publish",
+        "compress:images": "node scripts/compress-images.js"
     },
     "icon": "images/icon.png",
     "repository": {
@@ -59,7 +60,8 @@
         "eslint": "^10.2.0",
         "eslint-config-prettier": "^10.1.8",
         "globals": "^17.5.0",
-        "prettier": "^3.8.1"
+        "prettier": "^3.8.1",
+        "sharp": "^0.34.5"
     },
     "dependencies": {
         "squiggle-muter-plugin": "file:plugin"

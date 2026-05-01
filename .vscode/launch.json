@@ -19,6 +19,30 @@
                 // 告诉Extension Host窗口打开下面这个目录作为工作区。
                 "D:\\vscode-extensions\\test-projects"
             ]
+        },
+        {
+            // 用于直接运行和调试 Node.js 脚本，比如 compress-images.js
+            "name": "Debug Node.js Script",
+            // 告诉 VSCode 这是一个 Node.js 调试配置。
+            "type": "node",
+            "request": "launch",
+            // 要运行的脚本文件，${file} 表示当前在编辑器里打开的文件。
+            // 这样不管打开哪个脚本，按 F5 都能直接运行它。
+            "program": "${file}",
+            // 脚本的工作目录，设为项目根目录。
+            // 我们的脚本用 import.meta.url 构造路径，不依赖 cwd，
+            // 所以这个设置对路径没有影响，但控制台输出会在这里显示。
+            "cwd": "${workspaceFolder}",
+            "env": {
+                // 模拟 npm run 注入的环境变量，值指向项目根目录
+                "npm_config_local_prefix": "${workspaceFolder}"
+            },
+            // 跳过 Node.js 内部模块和 node_modules 里的代码，
+            // 调试时只聚焦在我们自己写的代码上。
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**"
+            ]
         }
     ]
 }

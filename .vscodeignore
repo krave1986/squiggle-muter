@@ -2,7 +2,6 @@
 .eslintrc*
 eslint.config.*
 .prettierrc*
-node_modules/
-plugin/package.json
+plugin/
 .gitignore
 jsconfig.json
